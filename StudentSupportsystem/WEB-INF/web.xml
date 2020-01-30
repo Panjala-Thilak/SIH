@@ -1,0 +1,6 @@
+<web-app>
+   <welcome-file-list>
+      <welcome-file>Home.html</welcome-file>
+   </welcome-file-list>
+	<load-on-startup>1</load-on-startup>
+</web-app>

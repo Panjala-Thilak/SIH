@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+body{
+background-image:url('statbg.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+color:white;
+}
+h1{
+font-family:"Helvetica", sans-serif;
+color:LightGray;
+font-size:45px;
+}
+h2{
+font-family:"Times New Roman",sans-serif;
+}
+.res{
+cursor: pointer;
+        border-radius: 1em;
+        color: #fff;
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+background: rgb(70, 159, 143);
+}
+.idv{
+width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+</style>
+<title>Status Page</title>
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.ID.value == "") {
+      alert("Complaint Id cannot be blank!");
+      form.ID.focus();
+      return false;
+    }
+     
+  }
+
+</script>
+</head>
+<body >
+<form ... onsubmit="return checkForm(this);" action=status.jsp method=post>
+<h1><center>Status</center></h1>
+<table align=center>
+<tr><td>
+<h2>Complaint Id:</td></h2>
+<td><input class="idv" type="text" size="20" name="ID"></td>
+</tr>
+<br><br>
+<tr>
+<td align=right>
+<input class="res" type=reset value="Reset">
+</td>
+<td>
+<input class="res" type="submit"value="GetStatus">
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

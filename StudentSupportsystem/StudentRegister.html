@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>StudentRegistration</title>
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.ROLLNO.value == "") {
+      alert("RollNo cannot be blank!");
+      form.ROLLNO.focus();
+      return false;
+    }
+    if(form.Password.value =="") {
+      alert("password cannot be blank!");
+      form.Password.focus();
+      return false;
+    } 
+	if(form.RPassword.value =="") {
+      alert("Confirm password cannot be blank!");
+      form.RPassword.focus();
+      return false;
+    }
+	if(form.RPassword.value != form.Password.value ) {
+      alert("password and confirm password should match!");
+      form.RPassword.focus();
+      return false;
+    }
+  }
+
+</script>
+</head>
+<body bgcolor=green text=white>
+<h2 align=center>Student Registration</h2>
+<form ... onsubmit="return checkForm(this);" action=Sregister.jsp method=post>
+<table align=center>
+<tr><td><h2>Enter RollNo</h2></td>
+		<td><input type=text name="ROLLNO" onBlur=nvalidate()></td>
+</tr>
+<tr><td><h2>Enter password</h2></td>
+		<td><input type=password name="Password"></td>
+</tr>
+<tr><td><h2>Confirm password</h2></td>
+		<td><input type=password name="RPassword" onBlur=validate()></td>
+</tr>
+<tr>
+<td align=right>
+<input type=reset value="reset">
+</td>
+<td>
+<input type="submit"value="Register">
+</td>
+</tr>
+</table>
+</form>
+</body>
+<head>
+<script type="text/javascript">
+function validate()
+{
+if(document.getElementById("Password").value!=document.getElementById("RPassword").value)
+{
+alert("U R password Not Matched!!......")
+}
+}
+function nvalidate()
+{
+if(document.getElementById("rollno").value!=null)
+{
+}
+else
+alert("RollNO need not be Empty");
+}
+</script>
+</head>
+</html>

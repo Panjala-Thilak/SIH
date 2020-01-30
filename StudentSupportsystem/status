@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Status Page</title>
+</head>
+<body bgcolor=black text=white>
+<form>
+<h2><center>Status</center></h2>
+<table align=center>
+<tr><td>
+<h2>ComplaintId:</td>
+<td><input type="text" size="10" name="ID"></td>
+</tr>
+<br><br>
+<tr>
+<td align=right>
+<input type=reset value="Reset">
+</td>
+<td>
+<input type="submit"value="GetStatus">
+</td>
+</tr>
+</form>
+</body>
+</html>
